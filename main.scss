@@ -83,13 +83,115 @@ header {
     }
 }
 
+#fixedheader {
+    text-align: auto;
+    height: 120px;
+    background: rgba(112, 73, 56, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .title {
+        font-size: 2rem;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        padding-left: 3%;
+        max-width: 50%;
+
+    }
+
+    nav {
+        list-style-type:none;
+        padding-right: 3%;
+        padding-bottom: 10px;
+        
+        ul {
+            list-style-type: none;
+            padding-top: 25px;
+        }
+        li {
+            display: inline-block;
+            padding-left: 1.75em;
+            padding-right: 1.75em;
+            }
+        
+        a {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 50;
+            font-size: 24px;
+            line-height: 29px;
+            text-decoration: none;
+        }
+
+        a:hover, a:active {
+            font-weight: bold;
+        }
+        
+    }
+
+    .menu-sub {
+        ul {
+            list-style: none;
+    
+            li {
+                display: block;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+    
+                a {
+                    color: #A5181E;
+                    font-style: normal;
+                    font-weight: 50;
+                    font-size: 24px;
+                }
+    }
+} }
+
+}
+
+@media only screen and (min-width: 1221px) and (max-width:1531px) {
+    #fixedheader {
+
+    
+        .title {
+            font-size: 36px;
+            
+
+    
+        }
+}
+}
+
+@media only screen and (max-width:1220px) {
+    #fixedheader {
+
+    
+        .title {
+            font-size: 36px;
+            max-width: 415px;
+            
+
+    
+        }
+}
+}
+
+
+
 
 
 
 .menu-sub {
     display: none;
     position: absolute;
-    z-index: 9999;
+    z-index: 99999;
     text-align: left;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #A5181E;
@@ -153,12 +255,19 @@ nav li:hover .menu-sub {
     padding-top: 75px;
     padding-left: 6%;
     padding-bottom: 75px;
+    float: none;
+    padding-right: 3%;
+
+    p {
+        overflow-wrap: break-word;
+    }
 }
 
 .explore-section-right {
     display: flex;
     height: 100%;
-    padding-left: 3%;
+    float: right;
+    margin-left: 2%;
 
 }
 
@@ -185,14 +294,25 @@ nav li:hover .menu-sub {
     text-align: center;
     color: white;
     z-index: 999;
+    overflow: hidden;
 }
 
 .explore-section {
     height: auto;
     background: #f0ecea;
-    display: flex;
+}
+
+/* @media only screen and (max-width: 1652px) {
+    .explore-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 75px;
+} 
+
+.explore-section-right {
     justify-content: space-between;
 }
+} */
 
 .homepage-call-to-action {
     text-align: right;
@@ -563,7 +683,7 @@ position: relative;
 
 .stories-page-section {
     height: 100%;
-    width: 100%;
+    width: auto;
     background-color: white;
     padding-top: 60px;
     display: flex;
@@ -618,6 +738,7 @@ position: relative;
     overflow-y: scroll;
     height: 100vh;
     align-content: flex-start;
+    width: auto;
 
     a {
         height: 250px;
@@ -699,22 +820,29 @@ position: relative;
 }
 
 
+.esri-popup__header {
+    background: white;
+    height: 150px;
+}
 
 
-
-
-
-.embed-container {
+.story-bg {
+    background: rgba(112, 73, 56, 0.5);
     height: 100vh;
     width:100%;
+}
+
+.embed-container {
+    height: calc(100vh - 150px);
+    width:100vw;
     z-index: -9999999;
     overflow: hidden;
-
+    background: white;
   }
 
 
 .people-embed-container {
-    height: 100vh;
+    height: 88vh;
     width:100%;
     overflow: hidden;
 }
