@@ -50,10 +50,14 @@ header .title {
   font-size: 48px;
   line-height: 59px;
   padding-top: 94px;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 
 header nav {
   list-style-type: none;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 header nav ul {
@@ -214,6 +218,11 @@ nav li:hover .menu-sub {
   padding-bottom: 75px;
 }
 
+.about-section p {
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+}
+
 #title-link {
   font-style: italic;
 }
@@ -247,6 +256,8 @@ nav li:hover .menu-sub {
 
 .explore-section-left p {
   overflow-wrap: break-word;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
 }
 
 .explore-section-right {
@@ -459,6 +470,8 @@ a, a:active, a:focus {
 
 #about-project-title {
   padding-top: 75px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .about-project-description {
@@ -468,6 +481,8 @@ a, a:active, a:focus {
   font-size: 24px;
   line-height: 36px;
   padding-top: 50px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .primary-data-buttons-section {
@@ -485,6 +500,8 @@ a, a:active, a:focus {
   height: 155px;
   position: relative;
   text-align: center;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
 }
 
 .primary-data-button img {
@@ -622,6 +639,8 @@ a, a:active, a:focus {
   font-size: 36px;
   line-height: 44px;
   z-index: 3;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .explore-page-descriptions {
@@ -639,6 +658,8 @@ a, a:active, a:focus {
 .explore-page-descriptions P {
   position: relative;
   z-index: 3;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
 }
 
 .explore-page-call-to-action {
@@ -652,6 +673,8 @@ a, a:active, a:focus {
   text-decoration: none;
   z-index: 3;
   position: relative;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 /* Stories Page */
@@ -668,6 +691,8 @@ a, a:active, a:focus {
 
 .stories-page-description p {
   padding-top: 75px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .stories-page-section {
@@ -704,12 +729,16 @@ a, a:active, a:focus {
   border-radius: 6px;
   color: #C4C4C4;
   padding-left: 15px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .stories-page-stories {
   display: inline-block;
   margin-right: 6%;
   margin-left: 75px;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
 }
 
 .stories-page-heading {
@@ -816,7 +845,7 @@ a, a:active, a:focus {
 
 .esri-popup__header {
   background: white;
-  height: 150px;
+  height: 60px;
 }
 
 .story-bg {

@@ -50,11 +50,13 @@ header {
         font-size: 48px;
         line-height: 59px;
         padding-top: 94px;
+        animation: fadein 1s;
 
     }
 
     nav {
         list-style-type:none;
+        animation: fadein 2s;
         
         ul {
             list-style-type: none;
@@ -187,7 +189,6 @@ header {
 
 
 
-
 .menu-sub {
     display: none;
     position: absolute;
@@ -230,7 +231,9 @@ nav li:hover .menu-sub {
     height: auto;
     overflow: visible;
     padding-bottom: 75px;
-}
+    p {
+    animation: fadein 3s;
+}}
 
 #title-link {
     font-style: italic;
@@ -260,6 +263,7 @@ nav li:hover .menu-sub {
 
     p {
         overflow-wrap: break-word;
+        animation: fadein 4s;
     }
 }
 
@@ -471,6 +475,7 @@ a, a:active, a:focus {
 
 #about-project-title {
     padding-top: 75px;
+    animation: fadein 3s;
 }
 
 .about-project-description {
@@ -480,6 +485,7 @@ a, a:active, a:focus {
     font-size: 24px;
     line-height: 36px;
     padding-top: 50px;
+    animation: fadein 3s;
 }
 
 .primary-data-buttons-section {
@@ -493,6 +499,7 @@ a, a:active, a:focus {
     height: 155px;
     position: relative;
     text-align: center;
+    animation: fadein 4s;
 
     img {
         z-index: -1;
@@ -629,6 +636,7 @@ a, a:active, a:focus {
     font-size: 36px;
     line-height: 44px;
     z-index: 3;
+    animation: fadein 3s;
 }
 
 .explore-page-descriptions {
@@ -645,6 +653,7 @@ a, a:active, a:focus {
     P {
         position: relative;
         z-index: 3;
+        animation: fadein 4s;
     }
 }
 
@@ -659,6 +668,7 @@ line-height: 36px;
 text-decoration: none;
 z-index: 3;
 position: relative;
+animation: fadein 3s;
 }
 
 
@@ -677,6 +687,7 @@ position: relative;
 
     p {
         padding-top: 75px;
+        animation: fadein 3s;
     }
 
 }
@@ -712,12 +723,14 @@ position: relative;
     border-radius: 6px;
     color: #C4C4C4;
     padding-left: 15px;
+    animation: fadein 3s;
   }
 
   .stories-page-stories {
     display: inline-block;
     margin-right: 6%;
     margin-left: 75px;
+    animation: fadein 4s;
 
   }
 
@@ -819,12 +832,10 @@ position: relative;
     margin-left: -162px;
 }
 
-
 .esri-popup__header {
     background: white;
     height: 60px;
 }
-
 
 .story-bg {
     background: rgba(112, 73, 56, 0.5);
@@ -945,3 +956,4 @@ footer a:hover {
     from { opacity: 0; }
     to   { opacity: 1; }
     }
+
