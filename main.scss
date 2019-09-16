@@ -732,8 +732,6 @@ animation: fadein 3s;
     display: inline-block;
     margin-right: 6%;
     margin-left: 75px;
-    animation: fadein 4s;
-
   }
 
 .stories-page-heading {
@@ -744,6 +742,7 @@ animation: fadein 3s;
     color: #A5181E;
     padding-top: 8px;
     padding-bottom: 20px;
+    animation: fadein 2s;
 }
 
 .stories-list {
@@ -754,6 +753,7 @@ animation: fadein 3s;
     height: 100vh;
     align-content: flex-start;
     width: auto;
+    animation: fadein 3s;
 
     a {
         height: 250px;

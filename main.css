@@ -739,8 +739,6 @@ a, a:active, a:focus {
   display: inline-block;
   margin-right: 6%;
   margin-left: 75px;
-  -webkit-animation: fadein 4s;
-          animation: fadein 4s;
 }
 
 .stories-page-heading {
@@ -751,6 +749,8 @@ a, a:active, a:focus {
   color: #A5181E;
   padding-top: 8px;
   padding-bottom: 20px;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 .stories-list {
@@ -765,6 +765,8 @@ a, a:active, a:focus {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   width: auto;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 .stories-list a {
