@@ -27,6 +27,7 @@ html, body {
   background-position: -576px -1072px;
   z-index: -999;
   margin-top: 0;
+  width: 100vw;
 }
 
 .wrapper {
@@ -98,6 +99,7 @@ header nav a:hover, header nav a:active {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  width: 100vw;
 }
 
 #fixedheader .title {
@@ -639,8 +641,8 @@ a, a:active, a:focus {
   font-size: 36px;
   line-height: 44px;
   z-index: 3;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 .explore-page-descriptions {
@@ -658,8 +660,8 @@ a, a:active, a:focus {
 .explore-page-descriptions P {
   position: relative;
   z-index: 3;
-  -webkit-animation: fadein 4s;
-          animation: fadein 4s;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 .explore-page-call-to-action {
