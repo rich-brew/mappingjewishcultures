@@ -42,6 +42,7 @@ header {
     height: 300px;
     background: rgba(112, 73, 56, 0.5);
 
+
     .title {
         font-size: 2rem;
         color: white;
@@ -77,6 +78,10 @@ header {
             font-size: 24px;
             line-height: 29px;
             text-decoration: none;
+        }
+
+        a:active, a:focus {
+            text-decoration: bold;
         }
 
         a:hover, a:active {
@@ -367,9 +372,15 @@ nav li:hover .menu-sub {
 .featured-stories {
     padding-top: 50px;
     display: flex;
-    justify-content: space-evenly;
-    overflow: hidden;
+    justify-content: space-between;
 
+}
+
+@media only screen and (max-width: 1420px) {
+    #sholem-hide {
+        display:none;
+        animation: fadein 2s;
+    }
 }
 
 .story-thumbnail {
@@ -377,6 +388,7 @@ nav li:hover .menu-sub {
     width: 300px;
     height: 200px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    margin-top: 25px;
 
     img {
         object-fit: cover;
@@ -452,11 +464,11 @@ footer {
     color: white;
 }
 
-a, a:active, a:focus {
-    color:white;
-    text-decoration: none;
-}
 
+a, a:focus, a:active {
+    text-decoration: none;
+    color: white;
+}
 .footer-subheading {
     font-style: normal;
     font-weight: bold;
@@ -493,7 +505,8 @@ a, a:active, a:focus {
 
 .primary-data-buttons-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding-top: 50px;
 }
 
@@ -503,6 +516,7 @@ a, a:active, a:focus {
     position: relative;
     text-align: center;
     animation: fadein 4s;
+    margin-top: 25px;
 
     img {
         z-index: -1;
@@ -944,7 +958,7 @@ footer a:hover {
 }
 
 
-@media only screen and (max-width: 1421px) {
+@media only screen and (max-width: 1455px) {
     .stories-list {
         justify-content: space-around;
 }
