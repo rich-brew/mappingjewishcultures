@@ -256,9 +256,9 @@ nav li:hover .menu-sub {
 .explore-section-left {
   padding-top: 75px;
   padding-left: 6%;
-  padding-bottom: 75px;
   float: none;
   padding-right: 3%;
+  padding-bottom: 3%;
 }
 
 .explore-section-left p {
@@ -525,6 +525,13 @@ a, a:focus, a:active {
 
 .primary-data-button img {
   z-index: -1;
+}
+
+@media only screen and (max-width: 1250px) {
+  .primary-data-buttons-section {
+    max-width: 450px;
+    margin: auto;
+  }
 }
 
 .primary-data-button::after {
