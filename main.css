@@ -21,6 +21,24 @@ html, body {
   height: 100%;
 }
 
+a:active, a:focus, a:visited {
+  text-decoration: none;
+}
+
+.footerlink:active, .footerlink:visited, .footerlink:focus {
+  text-decoration: underline;
+}
+
+.homepage-call-to-action:active, .homepage-call-to-action:visited, .homepage-call-to-action:focus {
+  text-decoration: underline;
+  color: #A5181E;
+}
+
+#title-link:active, #title-link:visited, #title-link:focus {
+  text-decoration: none;
+  color: #A5181E;
+}
+
 .background-img {
   background-image: url(images/cafe-patio.jpg);
   background-size: 2592px 3487px;
@@ -45,12 +63,13 @@ header {
 header .title {
   font-size: 2rem;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: 59px;
   padding-top: 94px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-animation: fadein 1s;
           animation: fadein 1s;
 }
@@ -254,11 +273,10 @@ nav li:hover .menu-sub {
 }
 
 .explore-section-left {
-  padding-top: 75px;
+  padding-top: 25px;
   padding-left: 6%;
-  float: none;
   padding-right: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 0%;
 }
 
 .explore-section-left p {
@@ -272,7 +290,6 @@ nav li:hover .menu-sub {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  float: right;
   margin-left: 2%;
 }
 
@@ -282,9 +299,20 @@ nav li:hover .menu-sub {
   margin-left: 8px;
   overflow: hidden;
   position: relative;
-  background: #C4C4C4;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
+}
+
+.explore-section-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .explore-link {
@@ -305,6 +333,13 @@ nav li:hover .menu-sub {
 .explore-section {
   height: auto;
   background: #f0ecea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 /* @media only screen and (max-width: 1652px) {
@@ -352,7 +387,7 @@ nav li:hover .menu-sub {
   font-weight: 50;
   font-size: 24px;
   line-height: 36px;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .stories-section {
@@ -383,8 +418,6 @@ nav li:hover .menu-sub {
   position: relative;
   width: 300px;
   height: 200px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
   margin-top: 25px;
 }
 
@@ -406,7 +439,7 @@ nav li:hover .menu-sub {
   line-height: 29px;
   text-align: center;
   color: white;
-  z-index: 999;
+  z-index: 3;
 }
 
 #warsaw, #sholem {
@@ -436,6 +469,23 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#footer-acknowledgements {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+#footer-navigation-section {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 352px;
+}
+
+#footer
+#footer-contacts {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
 }
 
 .footerlink {
@@ -506,16 +556,17 @@ a, a:focus, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 50px;
 }
 
 .primary-data-button {
-  width: 400px;
-  height: 155px;
+  width: 350px;
+  height: 136px;
   position: relative;
   text-align: center;
   -webkit-animation: fadein 4s;
@@ -525,6 +576,10 @@ a, a:focus, a:active {
 
 .primary-data-button img {
   z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -547,6 +602,10 @@ a, a:focus, a:active {
 
 #cafe-dataset {
   margin-left: -144px;
+}
+
+#browse-images {
+  margin-left: -120px;
 }
 
 #people-dataset {
@@ -601,9 +660,9 @@ a, a:focus, a:active {
   -ms-flex-wrap: row wrap;
       flex-wrap: row wrap;
   padding-top: 50px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .team-members-list {
@@ -722,14 +781,8 @@ a, a:focus, a:active {
 }
 
 .stories-page-section {
-  height: 100%;
-  width: auto;
   background-color: white;
   padding-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
   padding-bottom: 60px;
 }
 
@@ -759,12 +812,6 @@ a, a:focus, a:active {
           animation: fadein 3s;
 }
 
-.stories-page-stories {
-  display: inline-block;
-  margin-right: 6%;
-  margin-left: 75px;
-}
-
 .stories-page-heading {
   font-style: normal;
   font-weight: bold;
@@ -784,17 +831,30 @@ a, a:focus, a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-y: scroll;
-  height: 100vh;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  width: auto;
+  max-width: 1400px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
+  margin: auto;
 }
 
 .stories-list a {
   height: 250px;
+}
+
+@media only screen and (max-width: 1012px) {
+  .stories-list {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .stories-list {
+    max-width: 915px;
+  }
 }
 
 .story-item {
@@ -836,6 +896,8 @@ a, a:focus, a:active {
 
 #titles-list {
   list-style: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #titles-list li {
@@ -871,6 +933,18 @@ a, a:focus, a:active {
   margin-left: -162px;
 }
 
+#newyorktitle {
+  margin-left: -190px;
+}
+
+#berlintitle {
+  margin-left: -160px;
+}
+
+#odessatitle {
+  margin-left: -214px;
+}
+
 .esri-popup__header {
   background: white;
   height: 60px;
@@ -897,7 +971,7 @@ a, a:focus, a:active {
 }
 
 /* Hover States */
-.explore-section-image::after {
+.explore-section-image::before {
   content: '';
   position: absolute;
   top: 0;
@@ -914,6 +988,18 @@ a, a:focus, a:active {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.story-thumbnail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
   background-color: rgba(165, 24, 30, 0.4);
   width: 100%;
@@ -921,11 +1007,11 @@ a, a:focus, a:active {
   z-index: 1;
 }
 
-.story-thumbnail:hover::after {
+.story-thumbnail:hover::before {
   display: block;
 }
 
-.explore-section-image:hover::after {
+.explore-section-image:hover::before {
   display: block;
 }
 
@@ -971,13 +1057,6 @@ a, a:focus, a:active {
 
 footer a:hover {
   color: #a5181e;
-}
-
-@media only screen and (max-width: 1455px) {
-  .stories-list {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
 }
 
 @-webkit-keyframes fadein {

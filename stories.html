@@ -8,7 +8,7 @@ href = "main.css" />
 </head>
 <body>
 <div class='background-img'>
-<header>
+<header id='header'>
     <h1 class="title"><a href='index.html'>Mapping Modern Jewish Cultures</a></h1>
     
 <nav>
@@ -29,22 +29,32 @@ href = "main.css" />
 </nav>
 </header>
 
-
 <div class='stories-page-description'>
-<div class='wrapper'>
+    <div class='wrapper'>
     <p>Learn more about key people and events which shaped Jewish culture in the café by exploring StoryMaps which offer detailed narratives incorporating historical maps, photographs, paintings, and literature. Some StoryMaps offer an in-depth look at Jewish café culture in a specific city, some illustrate the life and career of a person important to café culture, and others explore an overarching theme.</p>
-</div>
+    </div>
 </div>
 
 <div class='stories-page-section'>
-    <div class='stories-search-section'>
+    <div class='wrapper'>
+   <!-- <div class='stories-search-section'>
         <input type="text" id="filterInput" placeholder="Search Keywords" onkeyup="searchStories()">
-    </div>
+    </div>-->
 
-    <div class='stories-page-stories'>
-        <h2 class='stories-page-heading'>All Stories</h2>
+    <h2 class='stories-page-heading'>All Stories</h2>
+   
         <ul id='titles-list'>
         <div class='stories-list'>
+
+            <li><a href='berlin-story.html'><div class='story-item'>
+                <img src='images/stories/Berlin-cropped.jpg'>
+                <h3 class='story-title' id='berlintitle'>Jewish Café Culture in Berlin</h3>                     
+            </div></a></li>
+
+            <li><a href='newyork-story.html'><div class='story-item'>
+                <img src='images/stories/New-York-cropped.png'>
+                <h3 class='story-title' id='newyorktitle'>Jewish Café Culture in New York City</h3>                     
+            </div></a></li>
 
             <li><a href='telaviv-story.html'><div class='story-item'>
                 <img src='images/stories/tel-aviv-jaffa-cropped.jpg'>
@@ -59,6 +69,11 @@ href = "main.css" />
             <li><a href='warsaw-story.html'><div class='story-item'>
                 <img src='images/stories/warsaw-cropped.jpg'>
                 <h3 class='story-title' id='warsawtitle'>Jewish Café Culture in Warsaw</h3>                       
+            </div></a></li>
+
+            <li><a href='http://scalar.usc.edu/works/odessa/a-brief-history-of-odessa?path=caf-culture-in-the-jewish-city' target='blank'><div class='story-item'>
+                <img src='images/stories/odessa-cropped.png'>
+                <h3 class='story-title' id='odessatitle'>Mapping Jewish Café Culture in Odessa</h3>                     
             </div></a></li>
 
             <li><a href='agnon-story.html'><div class='story-item'>
@@ -81,23 +96,10 @@ href = "main.css" />
                 <h3 class='story-title' id='yiddishtitle'>Yiddish Theater and Cabaret</h3>                     
             </div></a></li>
 
-        
-        
-
-
-
-
-
-
         </div>
     </ul>
     </div>
-
-
-
-
 </div>
-
 
 
 
@@ -123,15 +125,15 @@ href = "main.css" />
 
         <div class='footer-section' id='footer-acknowledgements'>
             <h3 class='footer-subheading'>Acknowledgements</h3>
-            <p>The project was generously funded by <a href='https://mcubed.umich.edu/' class='footerlink'>Mcubed</a>, <a href='https://lsa.umich.edu/humanities' class='footerlink'>The Institute for Humanities</a>, <a href='https://lsa.umich.edu/judaic' class='footerlink'>The Frankel Center for Judaic Studies</a>, and <a href='https://lsa.umich.edu/middleeast' class='footerlink'>The Middle East Studies Department</a> at the University of Michigan.</p>
+            <p>The project was generously funded by <a href='https://mcubed.umich.edu/' class='footerlink' target='blank'>Mcubed</a>, <a href='https://lsa.umich.edu/humanities' class='footerlink' target='blank'>The Institute for Humanities</a>, <a href='https://lsa.umich.edu/judaic' class='footerlink' target='blank'>The Frankel Center for Judaic Studies</a>, and <a href='https://lsa.umich.edu/middleeast' class='footerlink' target='blank'>The Middle East Studies Department</a> at the University of Michigan.</p>
         </div>
 
-        <div class='footer-section' id='footer-acknowledgements'>
+        <div class='footer-section' id='footer-navigation-section'>
             <h3 class='footer-subheading'>Navigate</h3>
             <ul class='footer-navigate'>
                 <li><a href='index.html'>Home</a></li>
                 <li><a href='about.html'>About</a></li>
-                <li><a href='explore.html'>Explore</a> | <a href='cities.html'>Cities</a> <a href='people.html'>People</a> <a href='time.html'>Time</a></li>
+                <li><a href='explore.html'>Explore</a> &nbsp; | <a href='cities.html'> &nbsp; Cities</a> <a href='people.html'>&nbsp;&nbsp;People</a> <a href='time.html'>&nbsp;&nbsp;Time</a></li>
                 <li><a href='stories.html'>Stories</a></li>
             </ul>
         </div>

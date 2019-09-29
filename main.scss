@@ -21,6 +21,25 @@ html, body {
     height: 100%;
 }
 
+a:active, a:focus, a:visited {
+    text-decoration:none;
+}
+
+.footerlink:active, .footerlink:visited, .footerlink:focus {
+    text-decoration:underline;
+    
+}
+
+.homepage-call-to-action:active, .homepage-call-to-action:visited, .homepage-call-to-action:focus {
+    text-decoration:underline;
+    color:#A5181E;
+}
+
+#title-link:active, #title-link:visited, #title-link:focus {
+    text-decoration:none;
+    color:#A5181E;
+}
+
 .background-img {
     background-image: url(images/cafe-patio.jpg);
     background-size: 2592px 3487px;
@@ -46,12 +65,13 @@ header {
     .title {
         font-size: 2rem;
         color: white;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Montserrat';
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
         line-height: 59px;
         padding-top: 94px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         animation: fadein 1s;
 
     }
@@ -225,6 +245,7 @@ header {
     }
 }
 
+
 nav li:hover .menu-sub {
     display: block;
   }
@@ -245,6 +266,9 @@ nav li:hover .menu-sub {
 #title-link {
     font-style: italic;
 }
+
+
+
 .special-link {
     color:#A5181E;
     text-decoration: underline;
@@ -262,26 +286,25 @@ nav li:hover .menu-sub {
 }
 
 .explore-section-left {
-    padding-top: 75px;
+    padding-top: 25px;
     padding-left: 6%;
-    float: none;
     padding-right: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 0%;
 
     p {
         overflow-wrap: break-word;
         animation: fadein 4s;
+
     }
 }
+
 
 .explore-section-right {
     display: flex;
     height: 100%;
-    float: right;
     margin-left: 2%;
 
 }
-
 
 .explore-section-image {
     height: 100%;
@@ -289,8 +312,18 @@ nav li:hover .menu-sub {
     margin-left: 8px;
     overflow: hidden;
     position: relative;
-    background: #C4C4C4;
     animation: fadein 3s;
+}
+
+.explore-section-image::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 
@@ -312,6 +345,8 @@ nav li:hover .menu-sub {
 .explore-section {
     height: auto;
     background: #f0ecea;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /* @media only screen and (max-width: 1652px) {
@@ -360,7 +395,7 @@ nav li:hover .menu-sub {
     font-weight: 50;
     font-size: 24px;
     line-height: 36px;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 .stories-section {
@@ -383,11 +418,11 @@ nav li:hover .menu-sub {
     }
 }
 
+
 .story-thumbnail {
     position: relative;
     width: 300px;
     height: 200px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
     margin-top: 25px;
 
     img {
@@ -408,7 +443,7 @@ nav li:hover .menu-sub {
     line-height: 29px;
     text-align: center;
     color: white;
-    z-index: 999;
+    z-index: 3;
 }
 
 #warsaw, #sholem {
@@ -436,6 +471,22 @@ footer {
 .footer-flex {
     display: flex;
     justify-content: space-between;
+}
+
+#footer-acknowledgements {
+    flex-shrink: 1;
+
+}
+
+#footer-navigation-section {
+    flex-shrink: 0;
+    min-width: 352px;
+}
+
+#footer
+
+#footer-contacts {
+    flex-shrink: 2;
 }
 
 .footerlink {
@@ -505,14 +556,14 @@ a, a:focus, a:active {
 
 .primary-data-buttons-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 50px;
 }
 
 .primary-data-button {
-    width: 400px;
-    height: 155px;
+    width: 350px;
+    height: 136px;
     position: relative;
     text-align: center;
     animation: fadein 4s;
@@ -520,6 +571,9 @@ a, a:focus, a:active {
 
     img {
         z-index: -1;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -544,6 +598,10 @@ a, a:focus, a:active {
 #cafe-dataset {
  margin-left: -144px;
 
+}
+
+#browse-images {
+    margin-left: -120px;
 }
 
 #people-dataset {
@@ -597,7 +655,7 @@ a, a:focus, a:active {
     display: flex;
     flex-wrap: row wrap;
     padding-top: 50px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 
@@ -717,12 +775,8 @@ animation: fadein 3s;
 }
 
 .stories-page-section {
-    height: 100%;
-    width: auto;
     background-color: white;
     padding-top: 60px;
-    display: flex;
-    overflow: hidden;
     padding-bottom: 60px;
 }
 
@@ -750,11 +804,6 @@ animation: fadein 3s;
     animation: fadein 3s;
   }
 
-  .stories-page-stories {
-    display: inline-block;
-    margin-right: 6%;
-    margin-left: 75px;
-  }
 
 .stories-page-heading {
     font-style: normal;
@@ -771,14 +820,26 @@ animation: fadein 3s;
     padding-top: 45px;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    height: 100vh;
     align-content: flex-start;
-    width: auto;
+    max-width: 1400px;
     animation: fadein 3s;
+    margin: auto;
+
 
     a {
         height: 250px;
+    }
+}
+
+@media only screen and (max-width: 1012px) {
+    .stories-list {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .stories-list {
+        max-width: 915px;
     }
 }
 
@@ -821,6 +882,8 @@ animation: fadein 3s;
 
 #titles-list {
     list-style: none;
+    margin-left: auto;
+    margin-right: auto;
 
     li {
         margin-bottom: 15px;
@@ -856,6 +919,18 @@ animation: fadein 3s;
     margin-left: -162px;
 }
 
+#newyorktitle {
+    margin-left: -190px;
+}
+
+#berlintitle {
+    margin-left: -160px;
+}
+
+#odessatitle {
+    margin-left: -214px;
+}
+
 .esri-popup__header {
     background: white;
     height: 60px;
@@ -885,7 +960,7 @@ animation: fadein 3s;
 
 /* Hover States */
 
-.explore-section-image::after {
+.explore-section-image::before {
     content:'';
     position: absolute;
     top: 0;
@@ -898,7 +973,19 @@ animation: fadein 3s;
 
 }
 
+
 .story-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.story-thumbnail::before {
     content:'';
     position: absolute;
     top: 0;
@@ -910,12 +997,12 @@ animation: fadein 3s;
     z-index: 1; 
 }
 
-.story-thumbnail:hover::after {
+.story-thumbnail:hover::before {
     display: block;
 } 
 
 
-.explore-section-image:hover::after{
+.explore-section-image:hover::before{
     display: block;
 }
 
@@ -964,12 +1051,6 @@ footer a:hover {
     color: rgb(165,24,30);
 }
 
-
-@media only screen and (max-width: 1455px) {
-    .stories-list {
-        justify-content: space-around;
-}
-}
 
 
 
