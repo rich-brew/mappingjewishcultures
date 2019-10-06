@@ -5,15 +5,20 @@
 <link rel = "stylesheet"
 type = "text/css"
 href = "main.css" />
+<script>
+    $(function() {
+      $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    });
+</script>
 </head>
 <body>
 <div class='background-img'>
 <header id='header'>
     <h1 class="title"><a href='index.html'>Mapping Modern Jewish Cultures</a></h1>
     
-<nav>
+<nav class='nav'>
     <ul>
-        <li><a href='index.html'>Home</a></li>
+        <li><a class='current' href='index.html'>Home</a></li>
         <li><a href='about.html'>About</a></li>
         <li><a href='explore.html'>Explore</a>
             <div class="menu-sub">
@@ -28,7 +33,6 @@ href = "main.css" />
     </ul>
 </nav>
 </header>
-
 
 
     <div class="about-section">
@@ -50,7 +54,7 @@ href = "main.css" />
                 </div></a>
 
                 <a href='people.html'><div class='explore-section-image'>
-                    <img class='explore-cities-img' src='images/explore-people.jpg'>
+                    <img class='explore-cities-img' src='images/explore-people-bg-edited.jpg'>
                     <h3 class='explore-link'>People</h3>
                 </div></a>
 
@@ -137,5 +141,3 @@ href = "main.css" />
 
 </body>
 </html>
-
-
