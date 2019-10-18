@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -17,6 +17,18 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	font-family: 'Montserrat', sans-serif;
 	vertical-align: baseline;
+}
+
+p {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: baseline;
 }
 
 .current {
@@ -186,6 +198,9 @@ header {
                     font-weight: 50;
                     font-size: 24px;
                 }
+                a:hover {
+                    font-weight: bold;
+                }
     }
 } }
 
@@ -246,6 +261,10 @@ header {
                 font-style: normal;
                 font-weight: 50;
                 font-size: 24px;
+            }
+
+            a:hover {
+                font-weight: bold;
             }
         }
     }
@@ -402,6 +421,10 @@ nav li:hover .menu-sub {
     font-size: 24px;
     line-height: 36px;
     padding-top: 25px;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 
 .stories-section {
@@ -444,8 +467,8 @@ nav li:hover .menu-sub {
     left: 50%;
     margin-left: -107.7165px;
     font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 20px;
     line-height: 29px;
     text-align: center;
     color: white;
@@ -464,14 +487,22 @@ nav li:hover .menu-sub {
     margin-left: -146px;
 }
 
+#women {
+    margin-left:-101px;
+}
+
 
 /* Footer */
 
 footer {
     background:rgba(112, 73, 56, 0.5);
-    height: 444px;
+    height: 100%;
     width: 100%;
     color: white;
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 
 .footer-flex {
@@ -519,7 +550,12 @@ footer {
     font-weight: 50;
     line-height: 36px;
     color: white;
+
+    a {
+    font-family: 'Open Sans', sans-serif;
+    }
 }
+
 
 
 a, a:focus, a:active {
@@ -672,6 +708,10 @@ a, a:focus, a:active {
     font-weight: 50;
     font-size: 24px;
     line-height: 36px;
+
+    li {
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 
 .team-members-support {
@@ -902,11 +942,11 @@ animation: fadein 3s;
 }
 
 #viennatitle {
-    margin-left: -171px;
+    margin-left: -188px;
 }
 
 #warsawtitle {
-    margin-left: -177px;
+    margin-left: -195px;
 }
 
 #agnontitle {
@@ -918,19 +958,19 @@ animation: fadein 3s;
 }
 
 #womentitle {
-    margin-left: -108px;
+    margin-left: -121px;
 }
 
 #yiddishtitle {
-    margin-left: -162px;
+    margin-left: -178px;
 }
 
 #newyorktitle {
-    margin-left: -190px;
+    margin-left: -213px;
 }
 
 #berlintitle {
-    margin-left: -160px;
+    margin-left: -181px;
 }
 
 #odessatitle {
