@@ -78,7 +78,6 @@ header {
 }
 
 header .title {
-  font-size: 2rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -144,7 +143,6 @@ header nav a:hover, header nav a:active {
 }
 
 #fixedheader .title {
-  font-size: 2rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -301,7 +299,7 @@ nav li:hover .menu-sub {
   padding-top: 25px;
   padding-left: 6%;
   padding-right: 3%;
-  padding-bottom: 0%;
+  padding-bottom: 25px;
 }
 
 .explore-section-left p {
@@ -533,6 +531,7 @@ footer p {
 .footer-section {
   max-width: 29%;
   padding-top: 75px;
+  padding-bottom: 75px;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -876,30 +875,37 @@ a, a:focus, a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   max-width: 1400px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
   margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .stories-list a {
   height: 250px;
 }
 
-@media only screen and (max-width: 1012px) {
+@media only screen and (max-width: 1005px) {
   .stories-list {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    max-width: 800px;
   }
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (min-width: 1006px) and (max-width: 1550px) {
   .stories-list {
     max-width: 915px;
   }
+}
+
+.stories-list a {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .story-item {
@@ -1102,6 +1108,34 @@ a, a:focus, a:active {
 
 footer a:hover {
   color: #a5181e;
+}
+
+.source-credit {
+  display: none;
+  position: absolute;
+  overflow: visible;
+  z-index: 3;
+  font-size: .8rem;
+  color: black;
+  margin-top: 7px;
+  -webkit-animation: fadein .5s;
+          animation: fadein .5s;
+}
+
+.source-credit:hover {
+  display: block;
+}
+
+.explore-section-image:hover .source-credit {
+  display: block;
+}
+
+.story-thumbnail:hover .source-credit {
+  display: block;
+}
+
+.explore-section-image:hover {
+  overflow: visible;
 }
 
 @-webkit-keyframes fadein {

@@ -81,7 +81,6 @@ header {
 
 
     .title  {
-        font-size: 2rem;
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
@@ -139,7 +138,6 @@ header {
     width: 100vw;
 
     .title {
-        font-size: 2rem;
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
@@ -314,7 +312,7 @@ nav li:hover .menu-sub {
     padding-top: 25px;
     padding-left: 6%;
     padding-right: 3%;
-    padding-bottom: 0%;
+    padding-bottom: 25px;
 
     p {
         overflow-wrap: break-word;
@@ -533,6 +531,7 @@ footer {
 .footer-section {
     max-width: 29%;
     padding-top: 75px;
+    padding-bottom: 75px;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -866,10 +865,11 @@ animation: fadein 3s;
     padding-top: 45px;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: space-around;
     max-width: 1400px;
     animation: fadein 3s;
     margin: auto;
+    justify-content:space-between;
 
 
     a {
@@ -877,16 +877,24 @@ animation: fadein 3s;
     }
 }
 
-@media only screen and (max-width: 1012px) {
+@media only screen and (max-width: 1005px) {
     .stories-list {
-        justify-content: space-evenly;
+        max-width: 800px;
+        
     }
 }
 
-@media only screen and (max-width: 1550px) {
+
+@media only screen and (min-width: 1006px) and (max-width: 1550px) {
     .stories-list {
         max-width: 915px;
     }
+}
+
+.stories-list a {
+margin-bottom:30px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .story-item {
@@ -912,6 +920,8 @@ animation: fadein 3s;
     height: 250px;
 
 }
+
+
 
 .story-title {
     position: absolute;
@@ -1097,10 +1107,29 @@ footer a:hover {
     color: rgb(165,24,30);
 }
 
+.source-credit {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    z-index: 3;
+    font-size: .8rem;
+    color: black;
+    margin-top:7px;
+    animation: fadein .5s;
+}
 
+.source-credit:hover {
+    display: block;
+}
 
+.explore-section-image:hover .source-credit {
+    display: block;
 
+}
 
+.explore-section-image:hover {
+    overflow: visible;
+}
 
 
 @keyframes fadein {
